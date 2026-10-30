@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segmentation-claim-audit"
+version = "0.1.0"
+description = "Offline audit of documented pixel-region capabilities against Python source"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+[project.scripts]
+segmentation-claim-audit = "segmentation_claim_audit.audit:main"
+
+[tool.setuptools.packages.find]
+include = ["segmentation_claim_audit*"]
